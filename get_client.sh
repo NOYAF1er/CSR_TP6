@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-curl http://localhost:5000/clients/0
+curl http://localhost:5000/supermarche/clients/0
