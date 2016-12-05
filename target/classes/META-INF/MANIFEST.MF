@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: NOYAF-PC
+Build-Jdk: 1.8.0_65
+Main-Class: fr.istic.m1.csr.supermarche.mta.main.Main
+Created-By: Maven Integration for Eclipse
+
