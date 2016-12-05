@@ -42,7 +42,7 @@ public class ClientResource extends ServerResource
 
     @Get("html")
     public Representation getUsersHtml() {
-    	return new FileRepresentation("templates/list-client.html", MediaType.TEXT_HTML);
+    	return new FileRepresentation("templates/index.html", MediaType.TEXT_HTML);
     }
     
     /**

@@ -40,7 +40,7 @@ public class Supermarche {
 		this.caisse = new Caisse();
 		
 		//Cr�ation de la liste des rayons (contenant les rayons cr��s)
-		this.listeRayons = new ArrayList<>();
+		this.listeRayons = new ArrayList<Rayon>();
 		for(Produits produit: Produits.values()){
 			Rayon rayon = new Rayon(produit);
 			this.listeRayons.add(rayon);
@@ -55,7 +55,7 @@ public class Supermarche {
 		employeDeCaisse.start();
 		
 		//Cr�ation des clients
-		this.listeClients = new ArrayList<>();
+		this.listeClients = new ArrayList<Client>();
 	}
 	
 	/**
@@ -64,7 +64,6 @@ public class Supermarche {
 	 */
 	public Client addClient(){
 		Client client = new Client(listeClients.size() ,getFileDeChariot(), getListeRayons(), getCaisse());
-		System.out.println(listeClients.size() + "----" + client.getId());
 		listeClients.add(client);
     	client.start();
 		return client;

@@ -60,10 +60,10 @@ public class Client extends Thread {
 		this.caisse = caisse;
 		this.etat = "INITIALISATION";
 		
-		this.listeDeCourses = new HashMap<>();
+		this.listeDeCourses = new HashMap<Produits, Integer>();
 		this.setListeDeCourses();
 		
-		this.listeDeCoursesRestant = new HashMap<>();
+		this.listeDeCoursesRestant = new HashMap<Produits, Integer>();
 		this.listeDeCoursesRestant.putAll(listeDeCourses);
 	}	
 	/**
@@ -84,10 +84,10 @@ public class Client extends Thread {
 		this.caisse = caisse;
 		this.etat = "INITIALISATION";
 		
-		this.listeDeCourses = new HashMap<>();
+		this.listeDeCourses = new HashMap<Produits, Integer>();
 		this.setListeDeCourses();
 		
-		this.listeDeCoursesRestant = new HashMap<>();
+		this.listeDeCoursesRestant = new HashMap<Produits, Integer>();
 		this.listeDeCoursesRestant.putAll(listeDeCourses);
 	}
 	

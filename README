@@ -1,0 +1,37 @@
+COMPILATION/EXECUTER
+
+Etant une application client/serveur, vous devrez l'exécuter en deux temps; 
+cous exécuter le seveur puis le client (dans cette ordre)
+
+SERVEUR:
+
+1) Se rendre dans le repertoire principale de l'application (PartieB)
+2) Se rendre ensuite dans le repertoire "src/main/java"
+3) puis dans le repertoire (package) "fr.istic.m1.csr.supermarche.smapi"
+4) Lancer la classe "App" afin de démarrer le serveur
+
+CLIENT:
+
+Deux option se présente à vous: en lignes de commande et avec un navigateur.
+
+I)ligne de commande:
+
+Assurer vous que la commande "curl" est reconnue
+-Créer des clients:
+	curl -X POST localhost:5000/supermarche/clients -d '{"nb": 2}' -H 'Accept: application/json' -H 'Content-type: application/json'
+NB: {"nb": 2} est mis pour donner le nombre de client à créer vous pourrez le modifier à votre guise
+
+-Lister les clients:
+	curl http://localhost:5000/supermarche/clients
+	
+-Recupérer un client
+	curl http://localhost:5000/supermarche/clients/0
+NB: ici, 0 represente l'identifiant du client, vous pourrez le modifier à votre guise
+
+-Lister le stock du supermarché
+	curl http://localhost:5000/supermarche/stock
+	
+II)Navigateur
+
+Se rendre à l'adresse suivante: 
+	http://localhost:5000

@@ -15,7 +15,7 @@ public class Caisse {
 	 */
 	public Caisse(){
 		clientSuivant = true;
-		tapis = new ArrayBlockingQueue<>(Supermarche.TAILLE_TAPIS);
+		tapis = new ArrayBlockingQueue<Produits>(Supermarche.TAILLE_TAPIS);
 	}
 	
 	/**

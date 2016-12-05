@@ -1,63 +1,44 @@
 $(document).ready(function() {
-    $("#create-user-form button").click( function() {
-        var new_user = new Object();
+    $("#create-clients-form button").click( function() {
+        var new_client = new Object();
 
-        new_user.name = $('input#name').val();
-        new_user.age = $('input#age').val()
+        new_client.qte = $('input#qte').val();
 
-        console.log(new_user);
+        console.log(new_client);
 
         $.ajax({
             type: "post",
-            url: "/users/",
-            data: JSON.stringify(new_user),
+            url: "/supermarche/clients",
+            data: JSON.stringify(new_client),
             success: function(data){
                 console.log(data);
-                window.location = "/users/";
+                window.location.reload(true);
             },
             dataType: "json",
             contentType : "application/json"
         });
     })
 
-    $('#list-users').ready( function() {
-        var users_table = $('#users-table tbody');
+    $('#list-clients').ready( function() {
+        var clients_table = $('#clients-table tbody');
 
         $.ajax({
             type: "get",
-            url: "/users/",
+            url: "/supermarche/clients",
             success: function(data){
                 console.log(data);
 
                 $.each(data, function (item) {
-                    var name = data[item].name;
-                    var age = data[item].age;
                     var id = data[item].id;
                     var url = data[item].url;
-                    var tweet_url = data[item].tweet_url;
 
-                    users_table.append(
+                    clients_table.append(
                     '<tr>' +
                         '<th><a href="' + url + '">' + id + '</a></th>' +
-                        '<td>' + name + '</td>' +
-                        '<td>' + age + '</td>' +
-                        '<td><a type="button" class="btn btn-success btn-xs" href = "'+ tweet_url + '">tweets</a></td>' +
-                        '<td><button type="button" class="btn btn-danger btn-xs" id="delete-user-' + id +'">delete</button></td>' +
+                        '<td><a href="' + url + '" onclick=alert("EnConstruction!")>' + url + '</a></td>' +
                     '</tr>'
                     );
-
-                    $('button#delete-user-' + id).click(function() {
-                        $.ajax({
-                            type: "delete",
-                            url: "/users/" + id,
-                            success: function(data){
-                                console.log("User " + data.id + " deleted");
-                                window.location = "/users/";
-                            }
-                        });
-                    });
-                    
-                });
+               });
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log("ajax error");
