@@ -1,20 +1,20 @@
 COMPILATION/EXECUTER
 
 Etant une application client/serveur, vous devrez l'exécuter en deux temps; 
-cous exécuter le seveur puis le client (dans cette ordre)
+d'abord exécuter le seveur puis le client (dans cet ordre)
 
 SERVEUR:
 
-1) Se rendre dans le repertoire principale de l'application (PartieB)
+1) Se rendre dans le repertoire principale de l'application (le repertoire courant)
 2) Se rendre ensuite dans le repertoire "src/main/java"
 3) puis dans le repertoire (package) "fr.istic.m1.csr.supermarche.smapi"
 4) Lancer la classe "App" afin de démarrer le serveur
 
 CLIENT:
 
-Deux option se présente à vous: en lignes de commande et avec un navigateur.
+Deux options se présentent à vous: en lignes de commande et avec un navigateur.
 
-I)ligne de commande:
+I)lignes de commande:
 
 Assurer vous que la commande "curl" est reconnue
 -Créer des clients:
